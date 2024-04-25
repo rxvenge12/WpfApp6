@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="University App" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Форма для ввода данных студента -->
+        <GroupBox Header="Студент" Grid.Column="0">
+            <StackPanel>
+                <TextBox Name="txtFullName" Margin="5" Width="200" Text="ФИО"/>
+                <TextBox Name="txtAge" Margin="5" Width="100" Text="Возраст"/>
+                <TextBox Name="txtSpecialty" Margin="5" Width="200" Text="Специальность"/>
+                <DatePicker Name="datePickerDOB" Margin="5" Width="150"/>
+                <TextBox Name="txtCourse" Margin="5" Width="100" Text="Курс"/>
+                <TextBox Name="txtGroup" Margin="5" Width="100" Text="Группа"/>
+                <TextBox Name="txtAverageScore" Margin="5" Width="100" Text="Средний балл"/>
+                <ComboBox Name="cmbGender" Margin="5" Width="100">
+                    <ComboBoxItem Content="Мужской"/>
+                    <ComboBoxItem Content="Женский"/>
+                </ComboBox>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Форма для ввода данных адреса -->
+        <GroupBox Header="Адрес" Grid.Column="1">
+            <StackPanel>
+                <TextBox x:Name="txtCity" Width="502" Text="Город" RenderTransformOrigin="0.498,0.506"/>
+                <TextBox x:Name="txtZipCode" Margin="5" Width="505" Text="Индекс"/>
+                <TextBox x:Name="txtStreet" Margin="5" Width="507" Text="Улица"/>
+                <TextBox x:Name="txtHouseNumber" Margin="5" Width="511" Text="Дом"/>
+                <TextBox x:Name="txtApartmentNumber" Margin="5" Width="513" Text="Квартира"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Кнопка для сохранения данных -->
+        <Button Name="btnSave" Grid.Column="1" Margin="495,353,0,20" HorizontalAlignment="Left" Content="Сохранить" Click="btnSave_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.138"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>
